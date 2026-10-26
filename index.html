@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Event Calendar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>📅 Daily Event Calendar</h1>
+            <p id="todayDate">Loading date...</p>
+        </header>
+
+        <form id="eventForm">
+            <input
+                type="text"
+                id="eventName"
+                placeholder="Enter event name"
+                required
+            >
+
+            <input type="date" id="eventDate" required>
+
+            <select id="category">
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <button type="submit">Add Event</button>
+        </form>
+
+        <section class="stats">
+            <div class="stat-card">
+                <h2 id="totalEvents">0</h2>
+                <p>Total Events</p>
+            </div>
+
+            <div class="stat-card">
+                <h2 id="upcomingEvents">0</h2>
+                <p>Upcoming</p>
+            </div>
+
+            <div class="stat-card">
+                <h2 id="todayEvents">0</h2>
+                <p>Today</p>
+            </div>
+        </section>
+
+        <section>
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search events..."
+            >
+
+            <div id="eventList"></div>
+        </section>
+    </main>
+ <script src="script.js" defer></script>
+</body>
+</html>
